@@ -11,4 +11,6 @@ josefpres on freesound.org for music
 EVretro on freesound.org for game over sound
 Daydream Font by DoubleGum on Dafont.com
 
-the tutorial took be about 3-4 hours, on top of the 1.5 hours of debuggung, and 1 hour spent on decided and implementing changes.
+the tutorial took be about 3-4 hours, on top of the 1.5 hours of debuggung, and 1 hour spent on deciding and implementing changes.
+
+the following changes were made: changed the music and game over sounds, changed the enemies and player, changed the font that was used.

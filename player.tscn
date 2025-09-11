@@ -1,19 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://s2qggrttrq3v"]
+[gd_scene load_steps=7 format=3 uid="uid://s2qggrttrq3v"]
 
-[ext_resource type="Texture2D" uid="uid://cfxvnstf1owon" path="res://art/playerGrey_up1.png" id="1_hqtel"]
 [ext_resource type="Script" uid="uid://br0mcr5ditclg" path="res://player.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://cffo7tgnk4k2w" path="res://art/playerGrey_up2.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://cqh16vwofxy1f" path="res://art/playerGrey_walk1.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://c7kscheja7kla" path="res://art/playerGrey_walk2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://b63dpndeb6wlo" path="res://art/kirbyidle.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://bw8apg1ewbhtu" path="res://art/kirbyjumping.webp" id="3_hqtel"]
+[ext_resource type="Texture2D" uid="uid://4n5dnspmposw" path="res://art/kirbyrunning.png" id="4_2hs0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_hqtel")
+"texture": ExtResource("2_hqtel")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_sweqy")
+"texture": ExtResource("3_hqtel")
 }],
 "loop": true,
 "name": &"up",
@@ -21,10 +20,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_2hs0m")
+"texture": ExtResource("2_hqtel")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_1jxqw")
+"texture": ExtResource("4_2hs0m")
 }],
 "loop": true,
 "name": &"walk",
@@ -39,7 +38,7 @@ script = ExtResource("1_sweqy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_dw050")
-animation = &"walk"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_b26j0")

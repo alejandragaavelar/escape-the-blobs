@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://conx6pnr1yaty"]
+[gd_scene load_steps=6 format=3 uid="uid://conx6pnr1yaty"]
 
 [ext_resource type="Script" uid="uid://c1oallupiwpuc" path="res://hud.gd" id="1_efote"]
 [ext_resource type="FontFile" uid="uid://db4yn64ocfrch" path="res://fonts/Xolonium-Regular.ttf" id="2_vow1y"]
+[ext_resource type="FontFile" uid="uid://cm2f6rdyjp858" path="res://fonts/Daydream DEMO.otf" id="3_vow1y"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_efote"]
 action = &"new_game"
@@ -38,9 +39,9 @@ offset_bottom = 79.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_vow1y")
+theme_override_fonts/font = ExtResource("3_vow1y")
 theme_override_font_sizes/font_size = 64
-text = "Dodge The Creeps!"
+text = "Dodge The Blob!"
 autowrap_mode = 2
 
 [node name="StartButton" type="Button" parent="."]
@@ -56,14 +57,19 @@ offset_right = 100.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_vow1y")
+theme_override_fonts/font = ExtResource("3_vow1y")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_vow1y")
 text = "Start"
+
+[node name="Settings" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
+[connection signal="start_game" from="." to="." method="_on_start_game"]
 [connection signal="start_game" from="." to="." method="new_game"]
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]

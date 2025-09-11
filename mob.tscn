@@ -1,21 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnyeu8ous3t6"]
+[gd_scene load_steps=5 format=3 uid="uid://cnyeu8ous3t6"]
 
 [ext_resource type="Script" uid="uid://cjmsbfpbhenfj" path="res://mob.gd" id="1_1qmh0"]
-[ext_resource type="Texture2D" uid="uid://q5krdnyq8qn7" path="res://art/enemyFlyingAlt_1.png" id="1_b3mxk"]
-[ext_resource type="Texture2D" uid="uid://dp68qc4qtk8rv" path="res://art/enemyFlyingAlt_2.png" id="2_1qmh0"]
-[ext_resource type="Texture2D" uid="uid://bn35y5pbiwlp6" path="res://art/enemySwimming_1.png" id="3_gfurk"]
-[ext_resource type="Texture2D" uid="uid://dkot8ydp7brrg" path="res://art/enemySwimming_2.png" id="4_ieysi"]
-[ext_resource type="Texture2D" uid="uid://dsumljan6e6te" path="res://art/enemyWalking_1.png" id="5_cixyi"]
-[ext_resource type="Texture2D" uid="uid://dabfo0lueftiw" path="res://art/enemyWalking_2.png" id="6_7ulmv"]
+[ext_resource type="Texture2D" uid="uid://cb6vqljaq34ag" path="res://art/roundedblobstar.png" id="2_p11y5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pcqmr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b3mxk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_1qmh0")
+"texture": ExtResource("2_p11y5")
 }],
 "loop": true,
 "name": &"fly",
@@ -23,10 +15,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_gfurk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ieysi")
+"texture": ExtResource("2_p11y5")
 }],
 "loop": true,
 "name": &"swim",
@@ -34,10 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_cixyi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_7ulmv")
+"texture": ExtResource("2_p11y5")
 }],
 "loop": true,
 "name": &"walk",
@@ -55,7 +41,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_pcqmr")
-animation = &"fly"
+animation = &"walk"
 speed_scale = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

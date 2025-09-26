@@ -19,3 +19,22 @@ ASSIGNMENT 2: LOOP IMPLEMENTATION
 
 I added a sink, which was health/damage recieved when clashing with the mobs. This roughly took me about ~30mins to implement. The faucet that I added was a coin drop, which adds up at the top of the screen. This one took me about ~2 hours (along with debugging so the game would actually run), however it doesn't always work when I play it. Finally, I added a level up feature that levels up after a certain amount of time. After 15 seconds, if the player is still alive, they will make it to level 2. 
 
+
+ASSIGNMENT 3: ADDING JUICE
+
+credits to the following for the art:
+Zerie on itch.io for character sprites
+MonoPixelArt for mushroom sprite
+ThePeeps191 for the coin sprite
+
+credits to the following for sound effects:
+Arcana23 on freesound.org for impact sound
+valenspire for coin sound
+
+Timeframe:
+
+It took me about 1 hour to find sprites that I liked that made sense to use together.
+I spent about 30-45 minutes cropping the individual frames in Illustrator to import into Godot.
+I spent 45 minutes finding a good impact sound to use for the player recieving damage. It took me about an hour to fix debugging some issues with the code I had used for it.
+I imported a new coin, and was able to fix the code so it actually collects the coins. This took me about an hour to do.
+I spent another hour cleaning everything up and making sure everything was the correct dimensions.

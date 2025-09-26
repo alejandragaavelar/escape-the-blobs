@@ -80,8 +80,7 @@ func new_game():
 # Handle player taking damage
 func _on_player_damaged(health):
 	$HUD.update_health(health)
-	# Optional: Play damage sound
-	# $DamageSound.play()
+	$HitSound.play()
 
 func _on_score_timer_timeout():
 	score += 1

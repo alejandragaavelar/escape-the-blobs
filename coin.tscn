@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://hl4c1jii2mwc"]
 
 [ext_resource type="Script" uid="uid://b8bmod6kkgddo" path="res://coin.gd" id="1_d5gmh"]
-[ext_resource type="Texture2D" uid="uid://dsmddty3ihlxg" path="res://art/coin.png" id="2_0t63x"]
+[ext_resource type="Texture2D" uid="uid://h7t3wkl5fnt5" path="res://art/spinning_coin/coin5.png" id="2_0t63x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v7riw"]
 
@@ -11,7 +11,6 @@
 script = ExtResource("1_d5gmh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_0t63x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

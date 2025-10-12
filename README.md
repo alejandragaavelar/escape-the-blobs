@@ -38,3 +38,12 @@ I spent about 30-45 minutes cropping the individual frames in Illustrator to imp
 I spent 45 minutes finding a good impact sound to use for the player recieving damage. It took me about an hour to fix debugging some issues with the code I had used for it.
 I imported a new coin, and was able to fix the code so it actually collects the coins. This took me about an hour to do.
 I spent another hour cleaning everything up and making sure everything was the correct dimensions.
+
+
+
+ASSIGNMENT 5: Menu Design
+
+Researching how to write the code in order to get a menu to appear before the actual game started took me about 20-ish minutes.
+Implementing everything into the Mainmenu.tscn took me about 15 minutes, and adding code and connecting everything took me another 20 minutes.
+Debugging took me about 1-2 hours, there was a specific line of code that was not cooperating with me.
+Making the visual changes, as well as making sure that the alignment was correct took me about 45min-1hr.

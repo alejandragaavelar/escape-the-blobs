@@ -69,9 +69,6 @@ func update_level(level):
 	else:
 		$LevelLabel.modulate = Color.WHITE
 
-func _on_start_button_pressed():
-	$StartButton.hide()
-	start_game.emit()
 
 func _on_message_timer_timeout():
 	$Message.hide()

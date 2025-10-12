@@ -1,18 +1,23 @@
 extends Node
 @export var mob_scene: PackedScene
 @export var coin_scene: PackedScene
+@export var menu_scene: PackedScene
 var score
 var coins_collected = 0
 var current_level = 1
 var game_time = 0.0
 var level_up_time = 15.0  # Level up every 15 seconds
+var game_started = false
 
 func _ready():
 	# Connect the new damaged signal
 	$Player.damaged.connect(_on_player_damaged)
+	show_menu()
 
 func _process(delta):
 	# Track game time during active gameplay
+	if game_started and not $ScoreTimer.is_stopped():
+		game_time += delta
 	if not $ScoreTimer.is_stopped():
 		game_time += delta
 		
@@ -76,6 +81,8 @@ func new_game():
 	get_tree().call_group("mobs", "queue_free")
 	get_tree().call_group("coins", "queue_free")
 	$Music.play()
+	$Player.start($StartPosition.position)
+	$Player.show()
 
 # Handle player taking damage
 func _on_player_damaged(health):
@@ -131,3 +138,33 @@ func _on_coin_collected():
 	$HUD.update_score(score)
 	$HUD.update_coins(coins_collected)
 	$CoinSound.play()
+	
+func show_menu():
+	game_started = false
+	# Hide HUD during menu
+	$HUD.hide()
+	
+	# Stop any active gameplay
+	$ScoreTimer.stop()
+	$MobTimer.stop()
+	$CoinTimer.stop()
+	
+	# Clear any existing entities
+	get_tree().call_group("mobs", "queue_free")
+	get_tree().call_group("coins", "queue_free")
+	
+	# Hide player
+	$Player.hide()
+	
+	# Instantiate and show menu
+	if menu_scene:
+		var menu = menu_scene.instantiate()
+		menu.start_game.connect(_on_menu_start_game)
+		add_child(menu)
+
+func _on_menu_start_game():
+	game_started = true
+	$HUD.show()
+	new_game()
+	
+		

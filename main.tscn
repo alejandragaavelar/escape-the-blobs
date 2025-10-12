@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://fj35ofndwxm1"]
+[gd_scene load_steps=12 format=4 uid="uid://fj35ofndwxm1"]
 
 [ext_resource type="Script" uid="uid://chss6ogh8x3wy" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cnyeu8ous3t6" path="res://mob.tscn" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://hl4c1jii2mwc" path="res://coin.tscn" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://s2qggrttrq3v" path="res://player.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://conx6pnr1yaty" path="res://HUD.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dkiulf4tj2y1t" path="res://MainMenu.tscn" id="4_5vw27"]
 [ext_resource type="AudioStream" uid="uid://cewdq7sw6dcqx" path="res://art/685631__arcana23__boing003.wav" id="6_7mycd"]
 [ext_resource type="AudioStream" uid="uid://86fu0dlbx3qc" path="res://art/699504__valenspire__coin_drop_09.wav" id="7_272bh"]
 
@@ -27,6 +28,7 @@ format = 3
 script = ExtResource("1_h2yge")
 mob_scene = ExtResource("2_lquwl")
 coin_scene = ExtResource("3_7mycd")
+menu_scene = ExtResource("4_5vw27")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
